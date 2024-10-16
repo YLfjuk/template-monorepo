@@ -12,3 +12,12 @@ This is a template for creating monorepo projects
 ## License
 
 MIT [@YLfjuk](https://github.com/YLfjuk)
+
+---
+
+## Upgrading dependencies
+
+```sh
+npx npm-check-updates -u
+npm install
+```

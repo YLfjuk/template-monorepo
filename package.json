@@ -12,9 +12,10 @@
     "scripts": {
         "release": "npm run build && changeset publish",
         "version": "changeset version",
-        "build": "turbo run build",
-        "dev": "turbo run dev",
-        "test": "turbo test",
+        "test": "turbo test && npm run test:v",
+        "coverage": "vitest run --coverage",
+        "test:v": "vitest --typecheck",
+        "test:ui": "vitest --ui",
         "test:types": "turbo run test:types",
         "lint": "turbo run lint"
     },

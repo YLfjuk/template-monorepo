@@ -18,6 +18,6 @@ MIT [@YLfjuk](https://github.com/YLfjuk)
 ## Upgrading dependencies
 
 ```sh
-npx npm-check-updates -u
+npx npm-check-updates -u --deep
 npm install
 ```

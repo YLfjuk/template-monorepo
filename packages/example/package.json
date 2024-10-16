@@ -15,23 +15,25 @@
         "example"
     ],
     "files": [
-        "src"
+        "dist"
     ],
+    "main": "dist/index.cjs",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
     "exports": {
-        ".": "./src/index.ts"
+        ".": {
+            "require": "./dist/index.cjs",
+            "import": "./dist/index.js"
+        }
     },
-    "scripts": {
-        "build": "npm test",
-        "coverage": "vitest run --coverage",
-        "test": "vitest --typecheck && npm run test:types",
-        "test:ui": "vitest --ui",
-        "test:types": "tsc --project tests/tsconfig.json"
-    },
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "npm run test:types",
+    "test:types": "tsc --project tsconfig.test.json",
     "devDependencies": {
-        "@vitest/coverage-v8": "^2.0.5",
-        "@vitest/ui": "^2.0.5",
-        "typescript": "^5.5.4",
-        "vitest": "^2.0.5"
+        "@ylfjuk/tsconfigs": "^0.0.6",
+        "tsup": "^8.3.0",
+        "typescript": "^5.5.4"
     },
     "peerDependencies": {
         "typescript": "^5.5.4"

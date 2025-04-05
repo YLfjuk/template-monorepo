@@ -29,13 +29,13 @@
     "scripts": {
         "build": "tsup",
         "dev": "tsup --watch",
-        "test": "npm run test:types",
-        "test:types": "tsc --project tsconfig.test.json"
+        "test": "vitest run --typecheck",
+        "test:types": "tsc --noEmit"
     },
     "devDependencies": {
         "@ylfjuk/tsconfigs": "^0.0.6",
-        "tsup": "^8.3.5",
-        "typescript": "^5.7.2"
+        "tsup": "^8.4.0",
+        "typescript": "^5.8.3"
     },
     "peerDependencies": {
         "typescript": "^5.5.4"

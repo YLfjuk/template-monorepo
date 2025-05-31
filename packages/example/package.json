@@ -27,14 +27,14 @@
         }
     },
     "scripts": {
-        "build": "tsup",
-        "dev": "tsup --watch",
+        "build": "tsdown",
+        "dev": "tsdown --watch",
         "test": "vitest run --typecheck",
         "test:types": "tsc --noEmit"
     },
     "devDependencies": {
         "@ylfjuk/tsconfigs": "^0.0.6",
-        "tsup": "^8.4.0",
+        "tsdown": "^0.12.5",
         "typescript": "^5.8.3"
     },
     "peerDependencies": {
